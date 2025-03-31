@@ -27,7 +27,7 @@ pipeline:
                     connectorRef: account.Tushar_docker_registry
                     repo: tusharkapadi1/harnesscd-example-aaps
                     tags:
-                      - "1"
+                      - <+pipeline.sequenceId>
           platform:
             os: Linux
             arch: Amd64
