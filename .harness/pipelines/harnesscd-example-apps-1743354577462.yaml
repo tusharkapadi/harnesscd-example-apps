@@ -26,10 +26,19 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: Build And Push
+                  identifier: Build_And_Push
+                  spec:
+                    connectorRef: account.Tushar_docker_registry
+                    repo: tusharkapadi1/harnesscd-example-aaps
+                    tags:
+                      - "1"
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
