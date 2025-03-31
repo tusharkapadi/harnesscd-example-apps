@@ -20,13 +20,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
-                  type: Run
-              - step:
                   type: BuildAndPushDockerRegistry
                   name: Build And Push
                   identifier: Build_And_Push
